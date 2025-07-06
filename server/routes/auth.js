@@ -3,7 +3,7 @@ import fs from 'fs-extra';
 import path from 'path';
 import axios from 'axios';
 import { fileURLToPath } from 'url';
-import { generateNumericUuid } from '../utils/functions.js';
+import { generateNumericUuid, USER_AGENT } from '../utils/functions.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -53,7 +53,7 @@ router.post('/send-otp', async (req, res) => {
             'referer': 'https://www.tataplaybinge.com/',
             'deviceid': deviceId,
             'origin': 'https://www.tataplaybinge.com',
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36'
+            'user-agent': USER_AGENT
           }
         }
       );
@@ -81,7 +81,7 @@ router.post('/send-otp', async (req, res) => {
           'origin': 'https://www.tataplaybinge.com',
           'platform': 'BINGE_ANYWHERE',
           'referer': 'https://www.tataplaybinge.com/',
-          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36'
+          'user-agent': USER_AGENT
         }
       }
     );
@@ -124,7 +124,7 @@ router.post('/verify-otp', async (req, res) => {
           'origin': 'https://www.tataplaybinge.com',
           'platform': 'BINGE_ANYWHERE',
           'referer': 'https://www.tataplaybinge.com/',
-          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36'
+          'user-agent': USER_AGENT
         }
       }
     );
@@ -149,7 +149,7 @@ router.post('/verify-otp', async (req, res) => {
           'origin': 'https://www.tataplaybinge.com',
           'platform': 'BINGE_ANYWHERE',
           'referer': 'https://www.tataplaybinge.com/',
-          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36'
+          'user-agent': USER_AGENT
         }
       }
     );
@@ -212,7 +212,7 @@ router.post('/verify-otp', async (req, res) => {
         'origin': 'https://www.tataplaybinge.com',
         'platform': 'WEB',
         'referer': 'https://www.tataplaybinge.com/',
-        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36'
+        'user-agent': USER_AGENT
       }
     });
 
@@ -258,7 +258,7 @@ router.post('/logout', async (req, res) => {
           'dthstatus': loginInfo.dthStatus,
           'subscriberid': loginInfo.subscriberId,
           'subscriptiontype': loginInfo.subscriptionStatus,
-          'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36'
+          'user-agent': USER_AGENT
         }
       });
 
