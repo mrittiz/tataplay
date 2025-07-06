@@ -44,7 +44,7 @@ router.post('/send-otp', async (req, res) => {
       
       const guestResponse = await axios.post(
         'https://tb.tapi.videoready.tv/binge-mobile-services/pub/api/v1/user/guest/register',
-        {},
+        null,
         {
           headers: {
             'accept': 'application/json, text/plain, */*',
@@ -69,7 +69,7 @@ router.post('/send-otp', async (req, res) => {
 
     const otpResponse = await axios.post(
       'https://tb.tapi.videoready.tv/binge-mobile-services/pub/api/v1/user/authentication/generateOTP',
-      {},
+      null,
       {
         headers: {
           'accept': 'application/json, text/plain, */*',
